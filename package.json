@@ -2,7 +2,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node dist/index.js",
-    "build": "babel -d dist src"
+    "build": "yarn run babel -d dist src"
   },
   "dependencies": {
     "express": "^4.17.1",
