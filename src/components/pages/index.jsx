@@ -1,5 +1,7 @@
 import React from 'react';
 
+const DOMAIN = process.env.DOMAIN;
+
 const Template = (props) => {
   return (
     <html>
@@ -14,11 +16,13 @@ const Template = (props) => {
   );
 };
 
+const assetFile = `https://${DOMAIN}/assets/images/cdn_test.png`;
+
 const Page = () => {
   return (
     <Template>
       <article>
-        <img src="/assets/images/cdn_test.png" />
+        <img src={assetFile} />
       </article>
     </Template>
   );
