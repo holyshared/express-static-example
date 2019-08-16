@@ -6,6 +6,8 @@ import IndexPage from './components/pages/index';
 
 const app = express();
 
+app.set("trust proxy", 1); // trust first proxy
+
 app.use(helmet());
 app.use(express.static('public', {
   maxAge: process.env.ASSETS_MAX_AGE || 1 * 60 * 60 * 1000
