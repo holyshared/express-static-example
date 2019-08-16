@@ -12,6 +12,7 @@ app.use(express.static('public', {
 }));
 
 app.get('/', (_req, res, _next) => {
+  res.type("html");
   res.write('<!doctype html>');
   ReactDOMServer.renderToNodeStream((<IndexPage />)).pipe(res);
 });
